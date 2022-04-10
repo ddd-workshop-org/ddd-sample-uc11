@@ -3,7 +3,7 @@ plugins {
     id "application"
 }
 ext {
-    javaMainClass = "com.ddd_bootcamp.application.Application"
+    javaMainClass = "com.ddd_bootcamp.application.CartApplication"
 }
 
 application {

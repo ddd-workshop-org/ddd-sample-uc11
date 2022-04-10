@@ -9,7 +9,7 @@ import java.util.Currency;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Application {
+public class CartApplication {
     public static void main(String[] args) {
         Cart cart = new Cart();
 
