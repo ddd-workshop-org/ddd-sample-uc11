@@ -17,6 +17,14 @@ public class Price {
         return new Price(value.subtract(value.divide(new BigDecimal(discountPercentage))), Currency.getInstance("USD"));
     }
 
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

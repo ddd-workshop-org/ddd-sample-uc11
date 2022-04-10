@@ -1,10 +1,13 @@
 package com.ddd_bootcamp.application;
 
 import com.ddd_bootcamp.domain.*;
+import com.ddd_bootcamp.dtos.PriceDTO;
+import com.ddd_bootcamp.dtos.ProductDTO;
 
 import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,7 +29,11 @@ public class Application {
         cart.checkOut();
         List<Product> flattenedProducts = cart.getFlattenedProducts();
 
-       Order order = OrderApplication.createOrder();
+        List<ProductDTO> productDTOList = flattenedProducts.stream().map(product -> new ProductDTO(product.getName(),
+                new PriceDTO(product.getPrice().getValue(), product.getPrice().getCurrency())))
+                .collect(Collectors.toList());
+
+        Order order = OrderApplication.createOrder(productDTOList);
 
         System.out.println("-------------------------------------------------------------------");
         System.out.println("-------------------------------------------------------------------");

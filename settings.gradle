@@ -1,3 +1,5 @@
 rootProject.name = 'ecom1'
+include 'common'
 include 'cart'
 include 'order'
+

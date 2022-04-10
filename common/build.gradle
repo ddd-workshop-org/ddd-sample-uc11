@@ -1,16 +1,8 @@
 plugins {
     id 'java'
-    id "application"
-}
-ext {
-    javaMainClass = "com.ddd_bootcamp.application.OrderApplication"
 }
 
-application {
-    mainClassName = javaMainClass
-}
-
-group 'com.ddd_bootcamp.order'
+group 'com.ddd_bootcamp.common'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -18,7 +10,6 @@ repositories {
 }
 
 dependencies {
-    implementation project(':common')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
@@ -29,4 +20,3 @@ test {
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
-
