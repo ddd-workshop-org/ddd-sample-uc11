@@ -1,6 +1,7 @@
 package com.ddd_bootcamp.application;
 
 import com.ddd_bootcamp.order.domain.Order;
+import com.ddd_bootcamp.order.domain.OrderId;
 import com.ddd_bootcamp.order.domain.Price;
 import com.ddd_bootcamp.order.domain.Product;
 import com.ddd_bootcamp.dtos.ProductDTO;
@@ -14,16 +15,21 @@ public class OrderApplication {
     }
 
     public static Order createOrder(List<ProductDTO> flattenedProducts) {
+        OrderId orderId = new OrderId("123-134-567-980-145");
+
+        //Get weight of Product by name from some service.
+        double defaultWeight = 10d;
+
         List<Product> products = flattenedProducts.stream()
                 .map(productDTO -> new Product(productDTO.name,
-                        new Price(productDTO.price.value, productDTO.price.currency), 10))
+                        new Price(productDTO.price.value, productDTO.price.currency), defaultWeight))
                 .collect(Collectors.toList());
 
-        return new Order(products);
+        return new Order(products, orderId);
     }
 
-    public static Price getOrderPrice() {
-        return null;
+    public static Price getOrderPrice(Order order) {
+        return order.totalPrice();
     }
 
 }

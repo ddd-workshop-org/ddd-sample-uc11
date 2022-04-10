@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Price {
     private BigDecimal value;
     private Currency currency;
+    public static Currency defaultCurrency = Currency.getInstance("USD");
 
     public Price(BigDecimal value, Currency currency) {
         this.value = value;
@@ -14,7 +15,11 @@ public class Price {
     }
 
     public Price reduceByPercent(int discountPercentage) {
-        return new Price(value.subtract(value.divide(new BigDecimal(discountPercentage))), Currency.getInstance("USD"));
+        return new Price(value.subtract(value.divide(new BigDecimal(discountPercentage))), defaultCurrency);
+    }
+
+    public Price plus(Price otherPrice) {
+       return new Price(this.value.add(otherPrice.value), this.currency);
     }
 
     @Override

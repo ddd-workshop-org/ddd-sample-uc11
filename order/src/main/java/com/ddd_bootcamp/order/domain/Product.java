@@ -3,10 +3,10 @@ package com.ddd_bootcamp.order.domain;
 public class Product {
     private String name;
     private Price price;
-    private int weight;
+    private double weight;
 
 
-    public Product(String name, Price price, int weight) {
+    public Product(String name, Price price, double weight) {
         this.name = name;
         this.price = price;
         this.weight = weight;
