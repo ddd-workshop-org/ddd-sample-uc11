@@ -1,4 +1,4 @@
-package com.ddd_bootcamp.domain.events;
+package com.ddd_bootcamp.order.domain.events;
 
 
 import java.util.List;

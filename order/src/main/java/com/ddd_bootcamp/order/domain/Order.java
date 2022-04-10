@@ -1,4 +1,4 @@
-package com.ddd_bootcamp.domain;
+package com.ddd_bootcamp.order.domain;
 
 import java.util.List;
 

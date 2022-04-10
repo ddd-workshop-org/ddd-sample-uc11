@@ -1,9 +1,8 @@
 package com.ddd_bootcamp.domain.events;
 
-
 import java.util.List;
 
-public class CartCheckedOutEvent implements  DomainEvent {
+public class CartCheckedOutEvent implements DomainEvent {
     private List<CartItem> items;
 
     public List<CartItem> getItems() {

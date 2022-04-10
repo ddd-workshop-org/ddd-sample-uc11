@@ -1,5 +1,6 @@
 package com.ddd_bootcamp.domain.events;
 
+
 import com.ddd_bootcamp.domain.Price;
 
 public class ItemAddedToCartEvent implements DomainEvent {

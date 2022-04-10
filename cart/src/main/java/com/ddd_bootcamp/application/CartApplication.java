@@ -3,6 +3,7 @@ package com.ddd_bootcamp.application;
 import com.ddd_bootcamp.domain.*;
 import com.ddd_bootcamp.dtos.PriceDTO;
 import com.ddd_bootcamp.dtos.ProductDTO;
+import com.ddd_bootcamp.order.domain.Order;
 
 import java.math.BigDecimal;
 import java.util.Currency;
@@ -30,12 +31,13 @@ public class CartApplication {
         List<Product> flattenedProducts = cart.getFlattenedProducts();
 
         List<ProductDTO> productDTOList = flattenedProducts.stream().map(product -> new ProductDTO(product.getName(),
-                new PriceDTO(product.getPrice().getValue(), product.getPrice().getCurrency())))
+                        new PriceDTO(product.getPrice().getValue(), product.getPrice().getCurrency())))
                 .collect(Collectors.toList());
 
         Order order = OrderApplication.createOrder(productDTOList);
 
         System.out.println("-------------------------------------------------------------------");
+        System.out.println("order = " + order);
         System.out.println("-------------------------------------------------------------------");
     }
 

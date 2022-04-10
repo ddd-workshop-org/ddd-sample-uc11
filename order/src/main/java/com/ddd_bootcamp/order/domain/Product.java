@@ -1,16 +1,15 @@
-package com.ddd_bootcamp.domain;
-
-import java.util.Objects;
+package com.ddd_bootcamp.order.domain;
 
 public class Product {
     private String name;
     private Price price;
-    private double weight;
+    private int weight;
 
 
-    public Product(String name, Price price, double weight) {
+    public Product(String name, Price price, int weight) {
         this.name = name;
         this.price = price;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -53,6 +52,7 @@ public class Product {
         return "Product{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
+                ", weight=" + weight +
                 '}';
     }
 }

@@ -1,6 +1,6 @@
-package com.ddd_bootcamp.domain.events;
+package com.ddd_bootcamp.order.domain.events;
 
-import com.ddd_bootcamp.domain.Price;
+import com.ddd_bootcamp.order.domain.Price;
 
 public class CartItem {
     private String name;

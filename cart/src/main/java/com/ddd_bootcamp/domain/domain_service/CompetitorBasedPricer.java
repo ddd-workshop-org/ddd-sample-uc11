@@ -1,7 +1,7 @@
 package com.ddd_bootcamp.domain.domain_service;
 
 
-import com.ddd_bootcamp.domain.Price;
+import com.ddd_bootcamp.order.domain.Price;
 
 import java.math.BigDecimal;
 import java.util.Currency;
