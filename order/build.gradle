@@ -10,7 +10,7 @@ application {
     mainClassName = javaMainClass
 }
 
-group 'org.example'
+group 'com.ddd_bootcamp.order'
 version '1.0-SNAPSHOT'
 
 repositories {
