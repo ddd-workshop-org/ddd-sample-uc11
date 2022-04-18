@@ -2,12 +2,9 @@ plugins {
     id 'java'
     id "application"
 }
-ext {
-    javaMainClass = "com.ddd_bootcamp.application.CartApplication"
-}
 
 application {
-    mainClassName = javaMainClass
+    mainClass = "com.ddd_bootcamp.application.CartApplication"
 }
 
 group 'com.ddd_bootcamp.cart'
