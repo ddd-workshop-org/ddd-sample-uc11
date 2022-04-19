@@ -6,4 +6,11 @@ public class OrderId {
     public OrderId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "OrderId{" +
+                "id='" + id + '\'' +
+                '}';
+    }
 }
