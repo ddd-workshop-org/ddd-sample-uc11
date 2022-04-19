@@ -38,6 +38,7 @@ public class CartApplication {
 
         System.out.println("-------------------------------------------------------------------");
         System.out.println("order = " + order);
+        System.out.println("-------------------------------------------------------------------");
         System.out.println("order price :" + OrderApplication.getOrderPrice(order));
         System.out.println("-------------------------------------------------------------------");
 
