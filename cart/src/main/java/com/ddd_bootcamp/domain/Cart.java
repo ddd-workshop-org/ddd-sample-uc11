@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Cart implements Entity<Cart> {
+public class Cart implements Aggregate {
 
     private CartId cartId;
     private List<DomainEvent> events = new ArrayList<>();
@@ -93,7 +93,6 @@ public class Cart implements Entity<Cart> {
         return cartId.hashCode();
     }
 
-    @Override
     public boolean hasSameIdentityAs(Cart other) {
         if (this == other) return true;
         if (other == null || getClass() != other.getClass()) return false;

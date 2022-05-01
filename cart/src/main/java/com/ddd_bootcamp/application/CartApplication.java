@@ -30,7 +30,8 @@ public class CartApplication {
         cart.checkOut();
         List<Product> flattenedProducts = cart.getFlattenedProducts();
 
-        List<ProductDTO> productDTOList = flattenedProducts.stream().map(product -> new ProductDTO(product.getName(),
+        List<ProductDTO> productDTOList = flattenedProducts.stream()
+                .map(product -> new ProductDTO(product.getName(),
                         new PriceDTO(product.getPrice().getValue(), product.getPrice().getCurrency())))
                 .collect(Collectors.toList());
 

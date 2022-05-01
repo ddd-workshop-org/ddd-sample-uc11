@@ -3,7 +3,7 @@ package com.ddd_bootcamp.order.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class Order {
+public class Order implements Aggregate {
     private List<Product> products;
     private OrderId orderId;
 
